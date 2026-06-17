@@ -1,6 +1,6 @@
-"""generator_49ae1b - Async task runner."""
+"""generator_6a2ce2 - Async task runner."""
 import asyncio, os
-TAG = "generator_49ae1b"
+TAG = "generator_6a2ce2"
 async def task(name: str, delay: float = 0.1):
     print(f"[{TAG}] Task '{name}' started")
     await asyncio.sleep(delay)

